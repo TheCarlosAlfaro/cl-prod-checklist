@@ -31,9 +31,9 @@ const SecondPage = () => (
       </div>
       <div className="item-container">
         <span>4:30</span>
-        <label htmlFor="item_1" className="checklist-item">
+        <label htmlFor="item_2" className="checklist-item">
           Quick line check.
-          <input type="checkbox" name="item_1" id="item_1" />
+          <input type="checkbox" name="item_2" id="item_2" />
           <span className="checkmark"></span>
         </label>
         <hr />
