@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
         <footer
           style={{
             textAlign: "center",
-            position: "fixed",
+            marginTop: "10%",
             bottom: 0,
             left: 0,
             right: 0,
