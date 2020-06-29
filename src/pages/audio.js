@@ -9,7 +9,7 @@ import { audioData } from "../data/audio-data"
 
 const AudioPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="AUDIO" />
     <h1>AUDIO</h1>
     <Link to="/">Go back to the homepage</Link>
     <div className="checklist-container">

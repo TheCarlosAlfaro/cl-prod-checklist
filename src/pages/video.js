@@ -9,7 +9,7 @@ import { videoData } from "../data/video-data"
 
 const VideoPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="VIDEO" />
     <h1>VIDEO</h1>
     <Link to="/">Go back to the homepage</Link>
     <div className="checklist-container">

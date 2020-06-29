@@ -9,7 +9,7 @@ import { lightingData } from "../data/lighting-data"
 
 const LightingPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="LIGHTING" />
     <h1>Lighting</h1>
     <Link to="/">Go back to the homepage</Link>
     <div className="checklist-container">
