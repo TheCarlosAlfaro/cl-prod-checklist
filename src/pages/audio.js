@@ -17,6 +17,7 @@ const AudioPage = () => (
         return (
           <TaskItem
             key={index}
+            number={task.taskNumber}
             time={task.taskTime}
             description={task.taskDescription}
           />
