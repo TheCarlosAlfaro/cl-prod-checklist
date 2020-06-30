@@ -22,7 +22,6 @@ export const audioData = [
     taskTime: "4:15",
     taskDescription: "Prep Mics and IEM's, lay them out on stage for VOX.",
     taskSteps: [
-      ,
       "Check/replace batteries",
       "Test to make sure there is signal for FOH, Recording, and Broadcast.",
       "Clean and disinfect all devices with wipes (Don't forget pastor Jabin's mics)",
