@@ -61,7 +61,7 @@ export const audioData = [
   },
   {
     taskNumber: 5,
-    taskTime: "5:15",
+    taskTime: "5:30",
     taskDescription:
       "Vocalists will arrive from warm ups. Full Rehearsal Start! Use this time to dial in mix.",
     taskSteps: [
@@ -73,20 +73,20 @@ export const audioData = [
   },
   {
     taskNumber: 6,
-    taskTime: "5:30",
+    taskTime: "6:40",
     taskDescription:
       "Team Huddle. Attendance required, unless there is an emergency with audio that cant wait. If so communicate with Brandon.",
     taskSteps: [],
   },
   {
     taskNumber: 7,
-    taskTime: "6:00",
+    taskTime: "6:50",
     taskDescription: "Doors open. Turn on BGM in lobby and house.",
     taskSteps: [],
   },
   {
     taskNumber: 8,
-    taskTime: "8:30",
+    taskTime: "7:00",
     taskDescription: "Run Service.",
     taskSteps: [
       "Hit RECORD on recording and broadcast machines",
@@ -98,7 +98,7 @@ export const audioData = [
   },
   {
     taskNumber: 9,
-    taskTime: "9:00",
+    taskTime: "8:30",
     taskDescription: "Service End",
     taskSteps: [
       "Let BGM run while people are mingling",
