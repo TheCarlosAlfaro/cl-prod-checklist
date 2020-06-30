@@ -20,6 +20,7 @@ const AudioPage = () => (
             number={task.taskNumber}
             time={task.taskTime}
             description={task.taskDescription}
+            steps={task.taskSteps}
           />
         )
       })}
