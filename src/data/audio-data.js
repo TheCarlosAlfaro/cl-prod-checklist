@@ -36,7 +36,7 @@ export const audioData = [
     taskSteps: [
       "Open, and start DVS (Dante Virtual Soundcard)",
       "Open Logic/Tracks and create a new session base off of our current templates.",
-      '"Save as" follow our naming convention ("M/D/Y" e.g. "June-24-2020")',
+      '"Save as" follow our naming convention ("M/D/Y_[keyword]" e.g. "June-24-2020_changes patching")',
       '"ARM" all tracks for recording (Make sure you are getting signal on every channel)',
     ],
   },
@@ -105,5 +105,11 @@ export const audioData = [
       "Transfer multitrack files to external hard-drive",
       "When lobby starts to clear out, start shutdown procedures. (turn off audio equipment and audio breakers) Follow the first checklist item in reverse order.",
     ],
+  },
+  {
+    taskNumber: 10,
+    taskTime: "8:30",
+    taskDescription: "Clean and organize work station.",
+    taskSteps: [],
   },
 ]
