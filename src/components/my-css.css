@@ -121,3 +121,41 @@ a {
     margin: 5px 15px;
   }
 }
+
+.menu {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  background: none;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.uncheck-button {
+  border: none;
+  margin: 0;
+  padding: 10px;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  background-color: #060505;
+  color: #fff;
+  font-family: sans-serif;
+  /* align-self: flex-end; */
+  cursor: pointer;
+}

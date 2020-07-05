@@ -16,6 +16,7 @@ export const audioData = [
       "Lobby Speaker",
       "Broadcast Mixing computer (Fader Port, UAD interface)",
     ],
+    isChecked: false,
   },
   {
     taskNumber: 1,
@@ -27,7 +28,9 @@ export const audioData = [
       "Clean and disinfect all devices with wipes (Don't forget pastor Jabin's mics)",
       "Lay out all mics and in ear packs on stage in an orderly fashion and label with names accordingly.",
     ],
+    isChecked: false,
   },
+
   {
     taskNumber: 2,
     taskTime: "4:30",
@@ -39,6 +42,7 @@ export const audioData = [
       '"Save as" follow our naming convention ("M/D/Y_[keyword]" e.g. "June-24-2020_changes patching")',
       '"ARM" all tracks for recording (Make sure you are getting signal on every channel)',
     ],
+    isChecked: false,
   },
   {
     taskNumber: 3,
@@ -50,6 +54,7 @@ export const audioData = [
       "Make EQ/Comp adjustments if needed",
       "Check Tracks levels (Ableton machine)",
     ],
+    isChecked: false,
   },
   {
     taskNumber: 4,
@@ -57,6 +62,7 @@ export const audioData = [
     taskDescription:
       "Band will be running transitions. Be on standby to make monitor adjustments.",
     taskSteps: ["Make IEM mix changes as requested by musicians"],
+    isChecked: false,
   },
   {
     taskNumber: 5,
@@ -69,6 +75,7 @@ export const audioData = [
       "Record rehearsals on both recording and broadcast machines",
       "Dial in FOH, and Broadcast mix",
     ],
+    isChecked: false,
   },
   {
     taskNumber: 6,
@@ -76,12 +83,14 @@ export const audioData = [
     taskDescription:
       "Team Huddle. Attendance required, unless there is an emergency with audio that cant wait. If so communicate with Brandon.",
     taskSteps: [],
+    isChecked: false,
   },
   {
     taskNumber: 7,
     taskTime: "6:50",
     taskDescription: "Doors open. Turn on BGM in lobby and house.",
     taskSteps: [],
+    isChecked: false,
   },
   {
     taskNumber: 8,
@@ -94,6 +103,7 @@ export const audioData = [
       "Pay attention for pastor's mic transition between the handheld and headset",
       "MUTE DCA faders from inputs not being use during the message (e.g. drums, bass, guitars) to prevent any distractions",
     ],
+    isChecked: false,
   },
   {
     taskNumber: 9,
@@ -105,11 +115,13 @@ export const audioData = [
       "Transfer multitrack files to external hard-drive",
       "When lobby starts to clear out, start shutdown procedures. (turn off audio equipment and audio breakers) Follow the first checklist item in reverse order.",
     ],
+    isChecked: false,
   },
   {
     taskNumber: 10,
     taskTime: "8:30",
     taskDescription: "Clean and organize work station.",
     taskSteps: [],
+    isChecked: false,
   },
 ]

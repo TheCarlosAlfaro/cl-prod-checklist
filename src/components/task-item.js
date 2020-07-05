@@ -1,11 +1,7 @@
 import React from "react"
 
-// import { myContext } from "../../provider"
-
 const TaskItem = props => {
   return (
-    // <myContext.Consumer>
-    //   {context => (
     <>
       <div className="item-container">
         <span>{props.time}</span>
@@ -16,8 +12,9 @@ const TaskItem = props => {
             type="checkbox"
             name={`item_${props.number}`}
             id={`item_${props.number}`}
-            // onChange={e => context.handleCheck(e)}
-            // checked={context.state.isChecked}
+            value={props.value}
+            onChange={e => props.change(e)}
+            defaultChecked={props.check}
           />
           <span className="checkmark"></span>
         </label>
@@ -32,8 +29,6 @@ const TaskItem = props => {
         <hr />
       </div>
     </>
-    // )}
-    // </myContext.Consumer>
   )
 }
 
