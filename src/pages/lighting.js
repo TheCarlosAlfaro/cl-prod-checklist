@@ -67,6 +67,8 @@ const LightingPage = props => {
         </div>
       </Layout>
     )
+  } else {
+    return true
   }
 }
 

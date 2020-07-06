@@ -64,6 +64,8 @@ const VideoPage = props => {
         </div>
       </Layout>
     )
+  } else {
+    return true
   }
 }
 

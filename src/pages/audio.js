@@ -63,6 +63,8 @@ const AudioPage = props => {
         </div>
       </Layout>
     )
+  } else {
+    return true
   }
 }
 
