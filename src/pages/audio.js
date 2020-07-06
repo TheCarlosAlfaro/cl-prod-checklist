@@ -8,7 +8,7 @@ import TaskItem from "../components/task-item"
 import { audioData } from "../data/audio-data"
 
 const AudioPage = props => {
-  if (typeof window !== `undefined`) {
+  if (typeof window !== undefined) {
     let checkboxValues =
       JSON.parse(localStorage.getItem("checkboxValues_audio")) || audioData
 
@@ -35,7 +35,6 @@ const AudioPage = props => {
 
       window.location.reload()
     }
-
     return (
       <Layout>
         <SEO title="AUDIO" />

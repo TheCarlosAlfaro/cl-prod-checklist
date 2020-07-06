@@ -8,7 +8,7 @@ import TaskItem from "../components/task-item"
 import { videoData } from "../data/video-data"
 
 const VideoPage = props => {
-  if (typeof window !== `undefined`) {
+  if (typeof window !== undefined) {
     let checkboxValues =
       JSON.parse(localStorage.getItem("checkboxValues_video")) || videoData
 

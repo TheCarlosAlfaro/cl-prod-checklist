@@ -8,7 +8,7 @@ import TaskItem from "../components/task-item"
 import { lightingData } from "../data/lighting-data"
 
 const LightingPage = props => {
-  if (typeof window !== `undefined`) {
+  if (typeof window !== undefined) {
     let checkboxValues =
       JSON.parse(localStorage.getItem("checkboxValues_lighting")) ||
       lightingData
