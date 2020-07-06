@@ -8,23 +8,33 @@ import TaskItem from "../components/task-item"
 import { audioData } from "../data/audio-data"
 
 const AudioPage = props => {
+  const windowGlobal = typeof window !== "undefined" && window
   let checkboxValues =
-    JSON.parse(localStorage.getItem("checkboxValues_audio")) || audioData
+    JSON.parse(windowGlobal.localStorage.getItem("checkboxValues_audio")) ||
+    audioData
 
   let isChecked = false
   const handleChange = e => {
     const checkboxID = parseInt(e.target.id.split("_").slice(-1))
     isChecked = !checkboxValues[checkboxID].isChecked
     checkboxValues[checkboxID].isChecked = isChecked
-    localStorage.setItem("checkboxValues_audio", JSON.stringify(checkboxValues))
-    checkboxValues = JSON.parse(localStorage.getItem("checkboxValues_audio"))
+    windowGlobal.localStorage.setItem(
+      "checkboxValues_audio",
+      JSON.stringify(checkboxValues)
+    )
+    checkboxValues = JSON.parse(
+      windowGlobal.localStorage.getItem("checkboxValues_audio")
+    )
   }
 
   const handleClick = () => {
     checkboxValues.forEach(task => {
       task.isChecked = false
     })
-    localStorage.setItem("checkboxValues_audio", JSON.stringify(checkboxValues))
+    windowGlobal.localStorage.setItem(
+      "checkboxValues_audio",
+      JSON.stringify(checkboxValues)
+    )
 
     window.location.reload()
   }
