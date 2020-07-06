@@ -8,36 +8,41 @@ import TaskItem from "../components/task-item"
 import { videoData } from "../data/video-data"
 
 const VideoPage = props => {
-  const windowGlobal = typeof window !== "undefined" && window
+  if (window) {
+    // use localStorage
+    const windowGlobal = typeof window !== "undefined" && window
 
-  let checkboxValues =
-    JSON.parse(windowGlobal.localStorage.getItem("checkboxValues_video")) ||
-    videoData
+    let checkboxValues =
+      JSON.parse(windowGlobal.localStorage.getItem("checkboxValues_video")) ||
+      videoData
 
-  let isChecked = false
-  const handleChange = e => {
-    const checkboxID = parseInt(e.target.id.split("_").slice(-1))
-    isChecked = !checkboxValues[checkboxID].isChecked
-    checkboxValues[checkboxID].isChecked = isChecked
-    windowGlobal.localStorage.setItem(
-      "checkboxValues_video",
-      JSON.stringify(checkboxValues)
-    )
-    checkboxValues = JSON.parse(
-      windowGlobal.localStorage.getItem("checkboxValues_video")
-    )
-  }
+    let isChecked = false
+    const handleChange = e => {
+      const checkboxID = parseInt(e.target.id.split("_").slice(-1))
+      isChecked = !checkboxValues[checkboxID].isChecked
+      checkboxValues[checkboxID].isChecked = isChecked
+      windowGlobal.localStorage.setItem(
+        "checkboxValues_video",
+        JSON.stringify(checkboxValues)
+      )
+      checkboxValues = JSON.parse(
+        windowGlobal.localStorage.getItem("checkboxValues_video")
+      )
+    }
 
-  const handleClick = () => {
-    checkboxValues.forEach(task => {
-      task.isChecked = false
-    })
-    windowGlobal.localStorage.setItem(
-      "checkboxValues_video",
-      JSON.stringify(checkboxValues)
-    )
+    const handleClick = () => {
+      checkboxValues.forEach(task => {
+        task.isChecked = false
+      })
+      windowGlobal.localStorage.setItem(
+        "checkboxValues_video",
+        JSON.stringify(checkboxValues)
+      )
 
-    window.location.reload()
+      window.location.reload()
+    }
+  } else {
+    return true
   }
 
   return (

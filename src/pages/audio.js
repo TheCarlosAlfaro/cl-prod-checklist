@@ -8,35 +8,40 @@ import TaskItem from "../components/task-item"
 import { audioData } from "../data/audio-data"
 
 const AudioPage = props => {
-  const windowGlobal = typeof window !== "undefined" && window
-  let checkboxValues =
-    JSON.parse(windowGlobal.localStorage.getItem("checkboxValues_audio")) ||
-    audioData
+  if (window) {
+    // use localStorage
+    const windowGlobal = typeof window !== "undefined" && window
+    let checkboxValues =
+      JSON.parse(windowGlobal.localStorage.getItem("checkboxValues_audio")) ||
+      audioData
 
-  let isChecked = false
-  const handleChange = e => {
-    const checkboxID = parseInt(e.target.id.split("_").slice(-1))
-    isChecked = !checkboxValues[checkboxID].isChecked
-    checkboxValues[checkboxID].isChecked = isChecked
-    windowGlobal.localStorage.setItem(
-      "checkboxValues_audio",
-      JSON.stringify(checkboxValues)
-    )
-    checkboxValues = JSON.parse(
-      windowGlobal.localStorage.getItem("checkboxValues_audio")
-    )
-  }
+    let isChecked = false
+    const handleChange = e => {
+      const checkboxID = parseInt(e.target.id.split("_").slice(-1))
+      isChecked = !checkboxValues[checkboxID].isChecked
+      checkboxValues[checkboxID].isChecked = isChecked
+      windowGlobal.localStorage.setItem(
+        "checkboxValues_audio",
+        JSON.stringify(checkboxValues)
+      )
+      checkboxValues = JSON.parse(
+        windowGlobal.localStorage.getItem("checkboxValues_audio")
+      )
+    }
 
-  const handleClick = () => {
-    checkboxValues.forEach(task => {
-      task.isChecked = false
-    })
-    windowGlobal.localStorage.setItem(
-      "checkboxValues_audio",
-      JSON.stringify(checkboxValues)
-    )
+    const handleClick = () => {
+      checkboxValues.forEach(task => {
+        task.isChecked = false
+      })
+      windowGlobal.localStorage.setItem(
+        "checkboxValues_audio",
+        JSON.stringify(checkboxValues)
+      )
 
-    window.location.reload()
+      window.location.reload()
+    }
+  } else {
+    return true
   }
 
   return (

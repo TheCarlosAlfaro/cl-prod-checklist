@@ -8,36 +8,43 @@ import TaskItem from "../components/task-item"
 import { lightingData } from "../data/lighting-data"
 
 const LightingPage = props => {
-  const windowGlobal = typeof window !== "undefined" && window
-  let checkboxValues =
-    JSON.parse(windowGlobal.localStorage.getItem("checkboxValues_lighting")) ||
-    lightingData
+  if (window) {
+    // use localStorage
+    const windowGlobal = typeof window !== "undefined" && window
+    let checkboxValues =
+      JSON.parse(
+        windowGlobal.localStorage.getItem("checkboxValues_lighting")
+      ) || lightingData
 
-  let isChecked = false
-  const handleChange = e => {
-    const checkboxID = parseInt(e.target.id.split("_").slice(-1))
-    isChecked = !checkboxValues[checkboxID].isChecked
-    checkboxValues[checkboxID].isChecked = isChecked
-    windowGlobal.localStorage.setItem(
-      "checkboxValues_lighting",
-      JSON.stringify(checkboxValues)
-    )
-    checkboxValues = JSON.parse(
-      windowGlobal.localStorage.getItem("checkboxValues_lighting")
-    )
+    let isChecked = false
+    const handleChange = e => {
+      const checkboxID = parseInt(e.target.id.split("_").slice(-1))
+      isChecked = !checkboxValues[checkboxID].isChecked
+      checkboxValues[checkboxID].isChecked = isChecked
+      windowGlobal.localStorage.setItem(
+        "checkboxValues_lighting",
+        JSON.stringify(checkboxValues)
+      )
+      checkboxValues = JSON.parse(
+        windowGlobal.localStorage.getItem("checkboxValues_lighting")
+      )
+    }
+
+    const handleClick = () => {
+      checkboxValues.forEach(task => {
+        task.isChecked = false
+      })
+      windowGlobal.localStorage.setItem(
+        "checkboxValues_lighting",
+        JSON.stringify(checkboxValues)
+      )
+
+      window.location.reload()
+    }
+  } else {
+    return true
   }
 
-  const handleClick = () => {
-    checkboxValues.forEach(task => {
-      task.isChecked = false
-    })
-    windowGlobal.localStorage.setItem(
-      "checkboxValues_lighting",
-      JSON.stringify(checkboxValues)
-    )
-
-    window.location.reload()
-  }
   return (
     <Layout>
       <SEO title="LIGHTING" />
