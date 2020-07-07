@@ -5,8 +5,10 @@ export const lightingData = [
     taskDescription: "Arrive! Power on all Lighting equipment.",
     taskSteps: [
       "All Breakers in the green room",
-      "GrandMA On PC",
-      "Check HAZE fluid levels ",
+      "Turn ON computer",
+      "Open GrandMA On PC (Icon on the middle of the Desktop)",
+      'Click "YES" on pop up message',
+      "Check HAZE fluid levels",
     ],
   },
   {
@@ -40,7 +42,7 @@ export const lightingData = [
     taskTime: "6:50",
     taskDescription: "Doors open.",
     taskSteps: [
-      'Have a "Walk-in" Look (make sure front wash is off)',
+      'Go to "Walk-in" Look (make sure front wash is off)',
       "Turn ON house lights",
     ],
   },
@@ -61,10 +63,13 @@ export const lightingData = [
     taskTime: "8:30",
     taskDescription: "Service End",
     taskSteps: [
-      'Go back to "Walk In" look',
+      'Go to "Walk Out" look',
       "Make sure house lights are ON at full intensity",
       'If changes were made to Show file "Save as"  and follow our naming convention ("M/D/Y_[keyword]" e.g. "June-24-2020_changes colors")',
-      "When auditorium clears out, start shutdown procedures. (Set grandMA On PC to sleep)",
+      "When auditorium clears out, start shutdown procedures.",
+      'Press "OFF" 2 times, click "CLEAR ALL"',
+      "Close GrandMA software (Don't save)",
+      "Turn OFF computer",
     ],
   },
   {
