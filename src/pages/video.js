@@ -31,11 +31,8 @@ const VideoPage = props => {
   }
 
   const handleClick = () => {
-    checkboxValues.forEach(task => {
-      task.isChecked = false
-    })
     typeof window !== "undefined" &&
-      localStorage.setItem(
+      localStorage.removeItem(
         "checkboxValues_video",
         JSON.stringify(checkboxValues)
       )
