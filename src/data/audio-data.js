@@ -1,39 +1,40 @@
 export const audioData = [
   {
     taskNumber: 0,
-    taskTime: "4:00",
+    taskTime: "6:30",
     taskDescription: "Arrive! Power on all breakers and audio equipment.",
     taskSteps: [
       "All Breakers in the green room",
-      "Stage left Audio Rack",
-      "Drummer's subwoofer",
-      "Stage wedge",
-      "Console",
+      // "Stage left Audio Rack",
+      // "Drummer's subwoofer",
+      // "Stage wedge",
       "FOH rack 1 and rack 2",
-      "Breaker for Main PA",
-      "Tracking Laptop",
-      "iPod for walk-in music (Make sure it's connected to power)",
+      "Console",
+      "Breaker for Main PA (FOH wall)",
+      "Walk-in music Laptop",
+      // "iPod for walk-in music (Make sure it's connected to power)",
       "Lobby Speaker",
+      "Setup Outside Speaker",
       "Broadcast Mixing computer (Fader Port, UAD interface)",
     ],
     isChecked: false,
   },
   {
     taskNumber: 1,
-    taskTime: "4:15",
-    taskDescription: "Prep Mics and IEM's, lay them out on stage for VOX.",
+    taskTime: "6:50",
+    taskDescription: "Prep Mics and IEM's, lay them out on stage for vocalists",
     taskSteps: [
       "Check/replace batteries",
-      "Test to make sure there is signal for FOH, Recording, and Broadcast.",
+      "Line check mics for FOH, Recording, and Broadcast.",
       "Clean and disinfect all devices with wipes (Don't forget pastor Jabin's mics)",
-      "Lay out all mics and in ear packs on stage in an orderly fashion and label with names accordingly.",
+      "Lay out all mics and IEM packs on stage in an orderly fashion and label with names accordingly.",
     ],
     isChecked: false,
   },
 
   {
     taskNumber: 2,
-    taskTime: "4:30",
+    taskTime: "7:00",
     taskDescription:
       "Setup recording session on both tracking and broadcast computers",
     taskSteps: [
@@ -46,19 +47,19 @@ export const audioData = [
   },
   {
     taskNumber: 3,
-    taskTime: "4:45",
+    taskTime: "7:10",
     taskDescription: "Patch/Check lines for band",
     taskSteps: [
-      "Make sure you are getting signal from every input to FOH, Recording, and Broadcast",
-      "Check for healthy Gain structure (Prevent inputs from clipping at all cost)",
-      "Make EQ/Comp adjustments if needed",
       "Check Tracks levels (Ableton machine)",
+      "Make sure you are getting signal from every input to FOH, Recording, and Broadcast",
+      // "Check for healthy Gain structure (Prevent inputs from clipping at all cost)",
+      // "Make EQ/Comp adjustments if needed",
     ],
     isChecked: false,
   },
   {
     taskNumber: 4,
-    taskTime: "5:00",
+    taskTime: "7:20",
     taskDescription:
       "Band will be running transitions. Be on standby to make monitor adjustments.",
     taskSteps: ["Make IEM mix changes as requested by musicians"],
@@ -66,11 +67,11 @@ export const audioData = [
   },
   {
     taskNumber: 5,
-    taskTime: "5:30",
+    taskTime: "7:30",
     taskDescription:
       "Vocalists will arrive from warm ups. Full Rehearsal Start! Use this time to dial in mix.",
     taskSteps: [
-      "Double check Gain levels for Vox mics (We don't want to be clipping)",
+      "Double check Gain levels for Vox mics",
       "Make EQ/Comp adjustments for Vox if needed",
       "Record rehearsals on both recording and broadcast machines",
       "Dial in FOH, and Broadcast mix",
@@ -79,22 +80,30 @@ export const audioData = [
   },
   {
     taskNumber: 6,
-    taskTime: "6:40",
-    taskDescription:
-      "Team Huddle. Attendance required, unless there is an emergency with audio that cant wait. If so communicate with Brandon.",
-    taskSteps: [],
+    taskTime: "8:00",
+    taskDescription: "Run through",
+    taskSteps: ["Start Countdown video"],
     isChecked: false,
   },
   {
     taskNumber: 7,
-    taskTime: "6:50",
-    taskDescription: "Doors open. Turn on BGM in lobby and house.",
+    taskTime: "8:30",
+    taskDescription:
+      "Team Huddle. Attendance required, unless there is an emergency with audio that cant wait. If so communicate with Brandon/Carlos.",
     taskSteps: [],
     isChecked: false,
   },
   {
     taskNumber: 8,
-    taskTime: "7:00",
+    taskTime: "8:50",
+    taskDescription:
+      "Doors open/We do Live. Play BGM in the lobby, house, and stream",
+    taskSteps: [],
+    isChecked: false,
+  },
+  {
+    taskNumber: 9,
+    taskTime: "9:00",
     taskDescription: "Run Service.",
     taskSteps: [
       "Hit RECORD on recording and broadcast machines",
@@ -106,22 +115,22 @@ export const audioData = [
     isChecked: false,
   },
   {
-    taskNumber: 9,
-    taskTime: "8:30",
+    taskNumber: 10,
+    taskTime: "10:00",
     taskDescription: "Service End",
     taskSteps: [
       "Let BGM run while people are mingling",
       "STOP recordings, and save Logic/Tracks session",
-      "Transfer multitrack files to external hard-drive",
-      "When lobby starts to clear out, start shutdown procedures. (turn off audio equipment and audio breakers) Follow the first checklist item in reverse order.",
+      // "Transfer multitrack files to external hard-drive",
+      // "When lobby starts to clear out, start shutdown procedures. (turn off audio equipment and audio breakers) Follow the first checklist item in reverse order.",
     ],
     isChecked: false,
   },
-  {
-    taskNumber: 10,
-    taskTime: "8:30",
-    taskDescription: "Clean and organize work station.",
-    taskSteps: [],
-    isChecked: false,
-  },
+  // {
+  //   taskNumber: 11,
+  //   taskTime: "8:30",
+  //   taskDescription: "Clean and organize work station.",
+  //   taskSteps: [],
+  //   isChecked: false,
+  // },
 ]
