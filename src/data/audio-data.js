@@ -40,7 +40,7 @@ export const audioData = [
     taskSteps: [
       "Open, and start DVS (Dante Virtual Soundcard)",
       "Open Logic/Tracks and create a new session base off of our current templates.",
-      '"Save as" follow our naming convention ("M/D/Y_[keyword]" e.g. "June-24-2020_changes patching")',
+      '"Save as" follow our naming convention ("M/D/Y_[keyword]" e.g. "03-07-2021_changes patching")',
       '"ARM" all tracks for recording (Make sure you are getting signal on every channel)',
     ],
     isChecked: false,
